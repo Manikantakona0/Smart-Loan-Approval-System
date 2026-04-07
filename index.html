@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBank - AI-Powered Credit Risk & Loan Approval</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Dashboard Page -->
+  <div id="dashboardPage" class="page active">
+    <header class="header">
+      <div class="header-content">
+        <div class="header-brand">
+          <div class="bank-icon">🏦</div>
+          <div class="brand-text">
+            <h1>SecureBank</h1>
+            <p>AI-Powered Credit Risk & Loan Approval</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="dashboard-section">
+        <h2 id="formTitle">Loan Application Assessment</h2>
+        <p class="tagline">Advanced AI-powered credit risk evaluation for faster, more accurate loan approval decisions</p>
+      </div>
+
+      </div>  <!-- dashboard-section END -->
+
+<div class="features-grid">
+  <div class="feature-card">
+    <div class="feature-icon">⚡</div>
+    <h3>Instant Decision</h3>
+    <p>Get loan approval in seconds</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">📊</div>
+    <h3>Smart Risk Analysis</h3>
+    <p>AI evaluates credit and income</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">🔒</div>
+    <h3>Secure System</h3>
+    <p>All data is protected</p>
+  </div>
+</div>
+
+      <div class="bank-logos-section">
+  <h3 class="trusted-title">Trusted Banking Partners</h3>
+
+  <div class="bank-logos-grid">
+
+    <div class="bank-logo-card" data-bank="State Bank of India">
+      <img src="https://i.pinimg.com/736x/11/bd/cd/11bdcdf25fad9a03dbf803d1a6b38e97.jpg" alt="SBI Logo">
+      <p>State Bank of India</p>
+    </div>
+
+    <div class="bank-logo-card" data-bank="HDFC Bank">
+      <img src="https://e7.pngegg.com/pngimages/257/159/png-clipart-hdfc-logo-thumbnail-bank-logos-thumbnail.png" alt="HDFC Logo">
+      <p>HDFC Bank</p>
+    </div>
+
+    <div class="bank-logo-card" data-bank="ICICI Bank">
+      <img src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-180986,resizemode-75,msid-71258666/industry/banking/finance/banking/icici-bank-to-set-up-450-new-branches-this-fiscal.jpg" alt="ICICI Logo">
+      <p>ICICI Bank</p>
+    </div>
+
+    <div class="bank-logo-card" data-bank="Axis Bank">
+      <img src="https://www.indiablooms.com/storage/assets/n/2017/1-1495625147.jpg" alt="Axis Bank Logo">
+      <p>Axis Bank</p>
+    </div>
+    <div class="bank-logo-card" data-bank="Union Bank of India">
+      <img src="https://content.jdmagicbox.com/v2/comp/delhi/17/011p66717/catalogue/union-bank-of-india-rajouri-garden-delhi-banks-1vu2xic-250.jpg" alt="Union Bank Logo">
+      <p>Union Bank of India</p>
+    </div>
+
+  </div>
+</div>
+
+      <div class="cta-section">
+        <div class="cta-content">
+          <h3>Start Your Loan Assessment</h3>
+          <p>Begin the evaluation process by entering the applicant's personal and financial information. Our AI system will analyze the data and provide an instant credit risk assessment with approval recommendation.</p>
+          <button id="startAssessmentBtn" class="btn-primary">Start Loan Assessment</button>
+        </div>
+      </div>
+
+      <footer class="footer-text">
+        <p>AI-Based Credit Risk Assessment and Loan Approval System</p>
+        <p>Academic Project - For Educational Purposes Only</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Loan Application Form Page -->
+  <div id="formPage" class="page">
+    <header class="header">
+      <div class="header-content">
+        <div class="header-brand">
+          <div class="bank-icon">🏦</div>
+          <div class="brand-text">
+            <h1>SecureBank</h1>
+            <p>Loan Application Form</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <button id="backToDashboardBtn" class="btn-back">← Back to Dashboard</button>
+
+      <div class="form-container">
+        <h2>Loan Application Assessment</h2>
+        <p class="form-intro">Please fill in all the required information accurately. The AI system will evaluate the credit risk based on the provided data.</p>
+
+        <form id="loanForm">
+          <!-- Personal Information Section -->
+          <div class="form-section">
+            <h3>Personal Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
+                <span class="error-msg" id="fullNameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="age">Age <span class="required">*</span></label>
+                <input type="number" id="age" name="age" placeholder="Enter age" required>
+                <span class="error-msg" id="ageError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender <span class="required">*</span></label>
+                <select id="gender" name="gender" required>
+                  <option value="">Select gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="error-msg" id="genderError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="maritalStatus">Marital Status <span class="required">*</span></label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                  <option value="">Select status</option>
+                  <option value="Single">Single</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorced">Divorced</option>
+                  <option value="Widowed">Widowed</option>
+                </select>
+                <span class="error-msg" id="maritalStatusError"></span>
+              </div>
+              <div class="form-group">
+  <label for="pan">PAN Number <span class="required">*</span></label>
+  <input type="text" id="pan" name="pan" placeholder="ABCDE1234F" required>
+  <span class="error-msg" id="panError"></span>
+</div>
+
+<div class="form-group">
+  <label for="aadhaar">Aadhaar Number <span class="required">*</span></label>
+  <input type="text" id="aadhaar" name="aadhaar" placeholder="12-digit Aadhaar" required>
+  <span class="error-msg" id="aadhaarError"></span>
+</div>
+
+<div class="form-group">
+  <label for="phone">Phone Number <span class="required">*</span></label>
+  <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required>
+  <span class="error-msg" id="phoneError"></span>
+</div>
+
+<div class="form-group">
+  <label for="email">Email <span class="required">*</span></label>
+  <input type="email" id="email" name="email" placeholder="Enter email" required>
+  <span class="error-msg" id="emailError"></span>
+</div>
+            </div>
+          </div>
+
+          <!-- Financial Information Section -->
+          <div class="form-section">
+            <h3>Financial Information</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="employmentStatus">Employment Status <span class="required">*</span></label>
+                <select id="employmentStatus" name="employmentStatus" required>
+                  <option value="">Select employment status</option>
+                  <option value="Salaried">Salaried</option>
+                  <option value="Self-Employed">Self-Employed</option>
+                  <option value="Business Owner">Business Owner</option>
+                  <option value="Unemployed">Unemployed</option>
+                </select>
+                <span class="error-msg" id="employmentStatusError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="monthlyIncome">Monthly Income (₹) <span class="required">*</span></label>
+                <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Enter monthly income" required>
+                <span class="error-msg" id="monthlyIncomeError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="existingLoans">Number of Existing Loans <span class="required">*</span></label>
+                <input type="number" id="existingLoans" name="existingLoans" placeholder="Enter number of loans" required>
+                <span class="error-msg" id="existingLoansError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="repaymentHistory">Loan Repayment History <span class="required">*</span></label>
+                <select id="repaymentHistory" name="repaymentHistory" required>
+                  <option value="">Select repayment history</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                  <option value="Poor">Poor</option>
+                  <option value="No History">No History</option>
+                </select>
+                <span class="error-msg" id="repaymentHistoryError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="creditScore">Credit Score (CIBIL) <span class="required">*</span></label>
+                <input type="number" id="creditScore" name="creditScore" placeholder="300 - 900" min="300" max="900" required>
+                <span class="error-msg" id="creditScoreError"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loan Details Section -->
+          <div class="form-section">
+            <h3>Loan Details</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="loanAmount">Loan Amount Requested (₹) <span class="required">*</span></label>
+                <input type="number" id="loanAmount" name="loanAmount" placeholder="Enter loan amount" required>
+                <span class="error-msg" id="loanAmountError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="loanTenure">Loan Tenure (Years) <span class="required">*</span></label>
+                <input type="number" id="loanTenure" name="loanTenure" placeholder="Enter tenure in years" required>
+                <span class="error-msg" id="loanTenureError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="loanPurpose">Loan Purpose <span class="required">*</span></label>
+                <select id="loanPurpose" name="loanPurpose" required>
+                  <option value="">Select purpose</option>
+                  <option value="Home Purchase">Home Purchase</option>
+                  <option value="Vehicle">Vehicle</option>
+                  <option value="Education">Education</option>
+                  <option value="Business">Business</option>
+                  <option value="Personal">Personal</option>
+                  <option value="Medical">Medical</option>
+                  <option value="Debt Consolidation">Debt Consolidation</option>
+                </select>
+                <span class="error-msg" id="loanPurposeError"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Assess Credit Risk</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <!-- Results Page -->
+  <div id="resultsPage" class="page">
+    <header class="header">
+      <div class="header-content">
+        <div class="header-brand">
+          <div class="bank-icon">🏦</div>
+          <div class="brand-text">
+            <h1>SecureBank</h1>
+            <p>Assessment Results</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="results-nav">
+        <button id="backToFormBtn" class="btn-back">← Back to Form</button>
+        <button id="newAssessmentBtn" class="btn-back">🏠 New Assessment</button>
+      </div>
+      
+      <div class="selected-bank-display">
+        <img id="selectedBankLogo" src="" alt="Bank Logo">
+        <h3 id="selectedBankName"></h3>
+      </div>
+
+      <!-- Decision Card -->
+      <div id="decisionCard" class="decision-card">
+        <div class="decision-icon" id="decisionIcon">✓</div>
+        <h2 id="decisionText">Loan Approved</h2>
+        <div class="risk-badge-container">
+          <span id="riskBadge" class="risk-badge">Low Risk</span>
+        </div>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="results-grid">
+        <!-- Applicant Summary -->
+        <div class="results-card">
+          <h3>Applicant Summary</h3>
+          <div class="summary-info">
+            <div class="info-row">
+              <span class="label">Name:</span>
+              <span id="resultName" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Age:</span>
+              <span id="resultAge" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Employment:</span>
+              <span id="resultEmployment" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Monthly Income:</span>
+              <span id="resultIncome" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Credit Score:</span>
+              <span id="resultCreditScore" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Loan Amount:</span>
+              <span id="resultLoanAmount" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Purpose:</span>
+              <span id="resultPurpose" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Interest Rate:</span>
+              <span id="resultInterest" class="value">-</span>
+            </div>
+            <div class="info-row">
+              <span class="label">Estimated EMI:</span>
+              <span id="resultEMI" class="value">-</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Approval Probability -->
+        <div class="results-card">
+          <h3>Approval Probability</h3>
+          <div class="progress-bar">
+            <div id="progressFill"></div>
+          </div>
+          <div class="probability-display">
+            <div class="probability-number">
+              <span id="approvalPercentage">85</span>
+              <span class="percent-sign">%</span>
+            </div>
+            <div class="probability-bar-container">
+              <div id="probabilityBar" class="probability-bar" style="width: 85%"></div>
+            </div>
+            <div class="probability-legend">
+              <div class="legend-item">
+                <div class="label">Low</div>
+                <div class="range">0-40%</div>
+              </div>
+              <div class="legend-item">
+                <div class="label">Medium</div>
+                <div class="range">41-70%</div>
+              </div>
+              <div class="legend-item">
+                <div class="label">High</div>
+                <div class="range">71-100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Credit Score Analysis -->
+      <div class="results-card">
+        <h3>Credit Score Analysis</h3>
+        <div class="credit-score-gauge">
+          <div class="gauge-scale">
+            <span class="scale-label">300</span>
+            <span class="scale-label red-label">Poor</span>
+            <span class="scale-label yellow-label">Fair</span>
+            <span class="scale-label green-label">Good</span>
+            <span class="scale-label blue-label">Excellent</span>
+            <span class="scale-label">900</span>
+          </div>
+          <div class="gauge-bar">
+            <div class="gauge-red"></div>
+            <div class="gauge-yellow"></div>
+            <div class="gauge-green"></div>
+            <div class="gauge-blue"></div>
+          </div>
+          <div id="gaugePointer" class="gauge-pointer" style="left: 50%">
+            <div class="pointer-arrow"></div>
+            <div id="pointerValue" class="pointer-value">750</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Assessment Explanation -->
+      <div class="results-card">
+        <h3>AI Assessment Explanation</h3>
+        <p id="assessmentExplanation">Assessment explanation will appear here.</p>
+      </div>
+
+      <div class="results-card">
+  <h3>Quick Summary</h3>
+  <p>Your loan eligibility is calculated based on income, credit score and repayment history.</p>
+</div>
+
+      <!-- Risk Factors -->
+      <div class="results-card">
+        <h3>Risk Factors Identified</h3>
+        <div id="riskFactorsList" class="risk-factors-list">
+          <!-- Risk factors will be inserted here -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="results-actions">
+        <button id="assessNewBtn" class="btn-primary">Assess New Application</button>
+      </div>
+      <div class="results-card">
+        <h3>Bank EMI Comparison</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Bank</th>
+              <th>Interest Rate</th>
+              <th>Estimated EMI</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonTableBody">
+          </tbody>
+        </table>
+</div>
+    </main>
+  </div>
+
+  <div id="loadingScreen" class="loading hidden">
+  <div class="loader"></div>
+  <p>Analyzing your application...</p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
